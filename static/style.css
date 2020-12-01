@@ -1,0 +1,36 @@
+/*Basic reset*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Custom properties */
+:root {
+  --black: #333333;
+}
+
+/* Global styles */
+html {
+  font-size: 10px;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Major Mono Display", monospace;
+}
+.contenedor {
+  margin: 0 auto;
+  max-width: 120rem;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
