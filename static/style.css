@@ -7,11 +7,6 @@
   box-sizing: border-box;
 }
 
-/* Custom properties */
-:root {
-  --black: #333333;
-}
-
 /* Global styles */
 html {
   font-size: 10px;
@@ -19,18 +14,100 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Major Mono Display", monospace;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(./img/bg-image.jpg) center/cover no-repeat;
+  perspective: 1000px;
 }
-.contenedor {
-  margin: 0 auto;
-  max-width: 120rem;
+.container {
+  width: 35rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  height: 60rem;
+  width: 36rem;
+  border-radius: 3rem;
+  padding: 0 5rem;
+  box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.2), 0 0 5rem rgba(0, 0, 0, 0.2);
+  transform-style: preserve-3d;
+}
+.sneaker {
+  min-height: 35vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sneaker img {
+  width: 25rem;
+  z-index: 2;
+  transition: all 0.75s ease-out;
+}
+.circle {
+  width: 17rem;
+  height: 17rem;
+  background: linear-gradient(
+    to right,
+    rgba(245, 70, 66, 0.75),
+    rgba(8, 83, 156, 0.75)
+  );
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+}
+.title {
+  font-family: monospace, sans-serif;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-height: 50%;
+}
+.info h1 {
+  font-size: 3rem;
+  transition: all 0.75s ease-out;
+}
+.info h3 {
+  font-size: 1.8rem;
+  color: #585858;
+  font-weight: lighter;
+  text-transform: lowercase;
+  margin-bottom: 2rem;
+  transition: all 0.75s ease-out;
+}
+.sizes {
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.75s ease-out;
+}
+.sizes button {
+  padding: 0.5rem 2rem;
+  background: none;
+  border: none;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  border-radius: 3rem;
+  font-weight: bold;
+  color: #585858;
+}
+button.active {
+  background: #585858;
+  color: white;
+}
+.purchase {
+  margin-top: 4rem;
+  transition: all 0.75s ease-out;
+}
+.purchase button {
   width: 100%;
-}
-a {
-  text-decoration: none;
-}
-ul {
-  list-style: none;
-}
-img {
-  max-width: 100%;
+  padding: 1rem 0;
+  background: #f54642;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 3rem;
+  font-weight: bolder;
 }
